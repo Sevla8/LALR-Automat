@@ -1,3 +1,0 @@
-/home/sevla/Desktop/LANG-lab2/CMakeFiles/edit_cache.dir
-/home/sevla/Desktop/LANG-lab2/CMakeFiles/rebuild_cache.dir
-/home/sevla/Desktop/LANG-lab2/CMakeFiles/LANG.dir
