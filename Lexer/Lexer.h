@@ -2,16 +2,16 @@
 
 #include <string>
 #include "Symbole.h"
-using namespace std;
 
 class Lexer {
 	public:
-		Lexer(string s) : flux(s), tete(0), tampon(nullptr) {}
-		~Lexer() {}
+		Lexer(std::string s);
+		~Lexer();
 		Symbole* Consulter();
 		void Avancer();
+		void pushSymbole(Symbole* s);
 	protected:
-		string flux;
+		std::string flux;
 		int tete;
-		Symbole * tampon;
+		Symbole* tampon;
 };

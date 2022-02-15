@@ -5,28 +5,17 @@
 #include "../Lexer/Symbole.h"
 #include "../Lexer/Lexer.h"
 
-using namespace std;
-
 class Etat;
-class Etat0;
-class Etat1;
-class Etat2;
-class Etat3;
-class Etat4;
-class Etat5;
-class Etat6;
-class Etat7;
-class Etat8;
-class Etat9;
 
 class Automate {
 	public:
-		Automate(string input);
-		void run();
+		Automate(std::string input);
+		~Automate();
 		void decalage(Etat* etat, Symbole* symbole);
 		void reduction(int n, Symbole* symbole);
+		void analyse();
 	private:
-		stack<Etat*> pileEtats;
-		stack<Symbole*> pileSymboles;
+		std::stack<Etat*> pileEtats;
+		std::stack<Symbole*> pileSymboles;
 		Lexer *lexer;
 };

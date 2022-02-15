@@ -4,12 +4,9 @@
 #include "../Lexer/Symbole.h"
 #include "../Automat/Automate.h"
 
-using namespace std;
-
 class Etat {
 	public:
 		Etat(int numero);
-		virtual ~Etat() {}
 		virtual bool transition(Automate* automate, Symbole* symbole) = 0;
 	private:
 		int numero;
@@ -18,7 +15,6 @@ class Etat {
 class Etat0 : public Etat {
 	public:
 		Etat0();
-		~Etat0() {}
 		bool transition(Automate* automate, Symbole * symbole);
 };
 

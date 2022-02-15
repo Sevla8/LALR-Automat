@@ -1,6 +1,8 @@
 #include "Symbole.h"
 #include <iostream>
 
+using namespace std;
+
 Symbole::Symbole(int i) : ident(i) {}
 
 Symbole::~Symbole() {}

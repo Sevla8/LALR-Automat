@@ -1,18 +1,15 @@
 #include <iostream>
-#include "Lexer/Lexer.h"
+#include "Automat/Automate.h"
 
+using namespace std;
 
-int main(void) {
-   string chaine("(1+34)*123");
+int main(int argc, char const *argv[]) {
+	string input;
+	cout << "Veuillez indiquer une phrase à analyser :" << endl;
+	cin >> input;
 
-   Lexer l(chaine);
+	Automate automate(input);
+	automate.analyse();
 
-   Symbole * s;
-   while(*(s=l.Consulter())!=FIN) {
-      s->Affiche();
-      cout<<endl;
-      l.Avancer();
-   }
-   return 0;
+	return 0;
 }
-

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-using namespace std;
 
 enum Identificateurs {
 	OPENPAR,
@@ -14,7 +13,7 @@ enum Identificateurs {
 	EXPR
 };
 
-const string Etiquettes[] = {
+const std::string Etiquettes[] = {
 	"OPENPAR",
 	"CLOSEPAR",
 	"PLUS",
